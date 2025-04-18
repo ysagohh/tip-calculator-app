@@ -195,7 +195,7 @@
     }
     
     form {
-        width: min(38rem, 100%);
+        width: min(34rem, 100%);
         background-color: var(--white);
         padding: var(--space-xs);
         padding-bottom: var(--space-m);
@@ -219,7 +219,7 @@
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
         gap: var(--space-xs);
     }
 
@@ -268,10 +268,6 @@
 
     img.logo {
         margin: var(--space-m) 0 var(--space-2xl);
-    }
-
-    .grid {
-        grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
     }
 
     div.outputs {
