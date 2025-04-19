@@ -275,6 +275,7 @@
         flex-direction: column;
         justify-content: space-between;
         padding: var(--space-xs) var(--space-l) 0;
+        max-width: 430px;
     }
 
     div.outputs > *:first-child > * + * {
