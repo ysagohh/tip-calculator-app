@@ -21,35 +21,29 @@
   <div>
     <img class="logo" src="./images/logo.svg" alt="splitter" />
   </div>
-  <form action="#" method="post" id="tip-calculator">
+  <form id="tip-calculator">
     <div class="inputs">
       <section>
-        <div>
-          <label for="bill" class="label">Bill</label>
-          <input type="number" id="bill" name="bill" placeholder="0" step="0.01"/>
+        <label for="bill" class="label">Bill</label>
+        <input type="number" id="bill" name="bill" placeholder="0" step="0.01"/>
+      </section>
+      <section>
+        <p class="label">Select Tip %</p>
+        <div class="grid">
+          <button type="button" class="tip-button" value="5">5%</button>
+          <button type="button" class="tip-button" value="10">10%</button>
+          <button type="button" class="tip-button" value="15">15%</button>
+          <button type="button" class="tip-button" value="25">25%</button>
+          <button type="button" class="tip-button" value="50">50%</button>
+          <input type="number" id="custom" placeholder="Custom" min="0" max="100" aria-label="Custom tip"/>
         </div>
       </section>
       <section>
-        <div>
-          <p class="label">Select Tip %</p>
-          <div class="grid">
-            <button type="button" class="tip-button" id="tip5" value="5">5%</button>
-            <button type="button" class="tip-button" id="tip10" value="10">10%</button>
-            <button type="button" class="tip-button" id="tip15" value="15">15%</button>
-            <button type="button" class="tip-button" id="tip25" value="25">25%</button>
-            <button type="button" class="tip-button" id="tip50" value="50">50%</button>
-            <input type="number" id="custom" placeholder="Custom" min="0" max="100" aria-label="Custom tip"/>
-          </div>
+        <div class="flex">
+          <label for="people" class="label">Number of People</label>
+          <span id="people-error-message"></span>
         </div>
-      </section>
-      <section>
-        <div>
-          <div class="flex">
-            <label for="people" class="label">Number of People</label>
-            <span id="people-error-message"></span>
-          </div>
-          <input type="number" id="people" name="people" placeholder="0"/>
-        </div>
+        <input type="number" id="people" name="people" placeholder="0"/>
       </section>
     </div>
     <div class="outputs">
@@ -63,7 +57,7 @@
           </div>
           <div class="results flex">
             <div>
-              <p class="label white">Total</p>
+              <p class="label">Total</p>
               <p class="subdued">/ person</p>
             </div>
             <p class="result" id="total-result">$0.00</p>
